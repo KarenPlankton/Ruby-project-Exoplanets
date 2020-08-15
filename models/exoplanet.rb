@@ -147,10 +147,11 @@ class Exoplanet
       st_dens,
       st_metfe,
       st_metratio,
-      st_age)
+      st_age,
+      loc_rowid
     ) =
     (
-      $1,$2,$3, $4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24
+      $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25
     )
     WHERE loc_rowid = $25"
     values = [@pl_hostname,
@@ -176,7 +177,10 @@ class Exoplanet
     @st_dens,
     @st_metfe,
     @st_metratio,
-    @st_age]
+    @st_age,
+    @loc_rowid]
+    print sql
+    print values
     SqlRunner.run( sql, values )
   end
 
