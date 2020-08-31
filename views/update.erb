@@ -14,17 +14,13 @@
   <body>
 
     <form  method="post" action="/update_action">
+      <input
+        type="hidden"
+        name="loc_rowid"
+        id="loc_rowid"
+        value="<%= @planet.loc_rowid %>"
+        />
       <table>
-        <tr>
-          <td><label>Planet Id</label></td>
-          <td><input
-            type="text"
-            name="loc_rowid"
-            id="loc_rowid"
-            value="<%= @planet.loc_rowid %>"
-            disabled
-            /></td>
-          </tr>
           <tr>
           <td><label>Planet Name</label></td>
           <td><input

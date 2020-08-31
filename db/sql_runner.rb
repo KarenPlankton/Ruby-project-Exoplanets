@@ -8,7 +8,7 @@ class SqlRunner
       db = PG.connect({ dbname: 'exoplanets', host: 'localhost' })
       db.prepare("query", sql)
       result = db.exec_prepared("query", values)
-      # pp result
+      #pp result
     ensure
       db.close() if db != nil
     end

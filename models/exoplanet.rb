@@ -179,8 +179,9 @@ class Exoplanet
     @st_metratio,
     @st_age,
     @loc_rowid]
-    print sql
-    print values
+    pp sql
+    pp values
+    pp @loc_rowid
     SqlRunner.run( sql, values )
   end
 
